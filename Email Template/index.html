@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="x-icon/image" href="https://i.ibb.co/Y2mXm0r/favicon.png" alt="favicon">
+
+    <!-- CSS Section -->
+    <style>
+        /*
+    Author: Rakibul Hassan Rifat
+    
+*/
+        /*
+	==========Index=========
+	01) Import Section
+    02) Variable Section
+    03) Mixing & Inlcude Section
+	04) Inheritence Section
+    05) Global CSS Section
+	06) Container Section
+    07) Header Section
+	08) Latest Section
+	09) Number Section
+    10) Seller Section
+    11) Review Section
+    12) Division Query Section
+    13) Featured Section
+    14) Footer Section
+    15) Media Query Section
+	========================
+*/
+        /*===== 01) Import Section =====*/
+        /*===== Sizing =====*/
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        /*===== 02) Variable Section =====*/
+        /*===== 03) Mixing & Inlcude Section =====*/
+        /*===== 04) Inheritence Section =====*/
+        .line,
+        .col-12 table tr .first,
+        .container .review .head table tr .first,
+        .col-12 table tr .second,
+        .container .review .head table tr .second {
+            border-bottom: 1px solid #C03D2A;
+            display: block;
+            margin: 0 auto;
+            padding: 7px;
+        }
+
+        /*===== 05) Global CSS Section =====*/
+        .btn,
+        .container .header .content .cover button,
+        .container .latest .row .col-4 .card .card-footer button,
+        .container .featured .row .col-6 .card .card-footer button {
+            border: none;
+            cursor: pointer;
+            background-color: #C03D2A;
+            padding: 15px 30px;
+            border-radius: 4px;
+            line-height: 120%;
+        }
+
+        .btn a,
+        .container .header .content .cover button a,
+        .container .latest .row .col-4 .card .card-footer button a,
+        .container .featured .row .col-6 .card .card-footer button a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            line-height: 140%;
+            text-align: center;
+        }
+
+        .col-12,
+        .container .review .head {
+            text-align: center;
+        }
+
+        .col-12 h2,
+        .container .review .head h2 {
+            padding: 40px 10px 10px;
+            font-weight: lighter;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 140%;
+            margin: 0;
+        }
+
+        .col-12 table,
+        .container .review .head table {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .col-12 table tr .first,
+        .container .review .head table tr .first {
+            width: 35%;
+        }
+
+        .col-12 table tr .second,
+        .container .review .head table tr .second {
+            width: 20%;
+        }
+
+        .devider {
+            padding: 15px 30px;
+            margin: 0 auto;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        div {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        /*===== 06) Container Section =====*/
+        .container {
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /*===== 07) Header Section =====*/
+
+        .container .header {
+            position: relative;
+            background: url("https://i.ibb.co/yS1ts5v/banner.png") no-repeat center;
+            background-size: auto;
+            height: 550px;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .container .header .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            top: 5%;
+            right: 0;
+            max-width: 320px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .container .header .content h1 {
+            color: #fff;
+            padding: 20px 10px 10px;
+            line-height: 140%;
+            font-size: 40px;
+        }
+
+        .container .header .content .cover {
+            padding: 30px 10px 100px;
+        }
+
+        /*===== 08) Latest Section =====*/
+
+        .container .latest .row .col-4 {
+            display: block;
+            width: 33%;
+            margin: 0 auto;
+            float: left;
+            padding: 5px;
+        }
+
+        .container .latest .row .col-4 .card {
+            text-align: center;
+        }
+
+        .container .latest .row .col-4 .card .wrap .card-img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container .latest .row .col-4 .card .card-header h4 {
+            font-size: 16px;
+            margin: 0;
+            padding: 10px;
+            line-height: 140%;
+            color: #000;
+        }
+
+        .container .latest .row .col-4 .card .card-body small {
+            display: block;
+            font-size: 14px;
+            padding: 10px 10px 0;
+        }
+
+        .container .latest .row .col-4 .card .card-body img {
+            width: 45%;
+            padding: 5px 10px 10px;
+        }
+
+        .container .latest .row .col-4 .card .card-body p {
+            padding: 10px 5px;
+            font-size: 14px;
+            margin: 0;
+            color: #ADB5BE;
+        }
+
+        .container .latest .row .col-4 .card .card-body span {
+            border-top: 2px solid #ECF0F1;
+            padding: 10px 15px;
+            display: block;
+            width: 20%;
+            margin: 0 auto;
+        }
+
+        .container .latest .row .col-4 .card .card-footer button {
+            padding: 12px 22px;
+        }
+
+        /*===== 09) Number Section  =====*/
+
+        .container .number .number-upper {
+            margin-top: 30px;
+            background-color: #C7D5DE;
+        }
+
+        .container .number .number-middle {
+            background-color: #C7D5DE;
+            padding-bottom: 60px;
+        }
+
+        .container .number .number-middle .row .col-3 {
+            padding: 5px;
+            text-align: center;
+            display: block;
+            float: left;
+            width: 25%;
+            margin: 0 auto;
+        }
+
+        .container .number .number-middle .row .col-3 p:first-child {
+            font-size: 34px;
+            color: #C03D2A;
+            line-height: 140%;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .container .number .number-middle .row .col-3 p:last-child {
+            font-size: 14px;
+            color: #88898A;
+            padding: 0 10px 10px;
+            margin: 0;
+        }
+
+        /*===== 10) Seller Section  =====*/
+
+        .container .seller .row .col-3 {
+            padding: 5px;
+            text-align: center;
+            width: 25%;
+            float: left;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container .seller .row .col-3 img {
+            width: 100%;
+        }
+
+        .container .seller .row2 .col-4 {
+            padding: 5px;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            width: 33%;
+            float: left;
+        }
+
+        .container .seller .row2 .col-4 img {
+            width: 100%;
+        }
+
+        .container .review .head h2 {
+            text-align: left;
+            padding: 40px 10px 0;
+        }
+
+        .container .review .head table {
+            padding: 10px 10px 30px;
+        }
+
+        .container .review .head table tr .first {
+            margin: 0;
+            width: 25%;
+        }
+
+        .container .review .head table tr .second {
+            margin: 0;
+            width: 8%;
+        }
+
+        /*===== 11) Review Section =====*/
+
+        .container .review .row .col {
+            padding: 5px 0;
+            display: block;
+            float: left;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .container .review .row .col img {
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .container .review .row .col .content p {
+            font-size: 14px;
+            margin: 0;
+            line-height: 160%;
+        }
+
+        .container .review .row .col .content p:first-child {
+            font-weight: bold;
+            padding: 10px 30px 10px 10px;
+        }
+
+        .container .review .row .col .content p:nth-child(2) {
+            color: #ADB5BE;
+            padding: 0 30px 10px 10px;
+        }
+
+        .container .review .row .col .content p:last-child {
+            font-style: italic;
+            color: #C03D2A;
+            padding: 0 30px 10px 10px;
+        }
+
+        /*===== 12) Division Section =====*/
+        /*===== 13) Featured Section =====*/
+
+        .container .featured .row .col-6 {
+            padding: 5px 0;
+            float: left;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .container .featured .row .col-6 img {
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .container .featured .row .col-6 .card .card-header h4 {
+            font-size: 16px;
+            margin: 0;
+            padding: 10px;
+            line-height: 140%;
+            color: #000;
+        }
+
+        .container .featured .row .col-6 .card .card-body small {
+            display: block;
+            font-size: 14px;
+            padding: 10px 10px 0;
+        }
+
+        .container .featured .row .col-6 .card .card-body img {
+            width: 45%;
+            padding: 5px 10px 10px;
+        }
+
+        .container .featured .row .col-6 .card .card-body p {
+            padding: 5px 15px 5px 5px;
+            font-size: 14px;
+            margin: 0;
+            color: #ADB5BE;
+        }
+
+        .container .featured .row .col-6 .card .card-footer button {
+            padding: 12px 22px;
+        }
+
+        /*===== 14) Footer Section =====*/
+        .container .footer {
+            background-color: #000;
+        }
+
+        .container .footer .footer-upper {
+            background-color: #000;
+        }
+
+        .container .footer .devider {
+            background-color: #000;
+        }
+
+        .container .footer .row .col-4 {
+            background-color: #000;
+            padding: 5px 0;
+            text-align: center;
+            float: left;
+            width: 33%;
+            margin: 0 auto;
+        }
+
+        .container .footer .row .col-4 p {
+            color: #fff;
+        }
+
+        .container .footer .row .col-4 table {
+            width: 100%;
+            text-align: center;
+            color: #2E4153;
+        }
+
+        .container .footer .row .col-4 table td a {
+            font-size: 14px;
+            line-height: 160%;
+            color: #2E4153;
+            text-decoration: none;
+        }
+
+        .container .footer .row .col-4 table td a:hover {
+            text-decoration: underline;
+        }
+
+        .container .footer .row .col-4 table td .social a {
+            text-decoration: none;
+        }
+
+        .container .footer .row .col-4 table td .social a img {
+            padding: 5px;
+            width: 15%;
+        }
+
+        .container .footer .row .col-4:last-child table p {
+            font-size: 14px;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .container .footer .devider2 {
+            border-bottom: 1px solid #2E4153;
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 10px 0;
+            display: block;
+        }
+
+        .container .footer .copyright {
+            padding: 5px 0;
+        }
+
+        .container .footer .copyright p {
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /*===== 15) Media Query Section =====*/
+        @media (max-width: 500px) {
+            .latest .row .col-4 {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+            }
+
+            .number .number-middle .row .col-3 {
+                width: 50% !important;
+                float: left !important;
+                margin: 0 auto !important;
+            }
+
+            .seller .row .col-3 {
+                width: 50% !important;
+                float: left !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .seller .row2 .col-4 {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+            }
+
+            .review .row .col {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+                text-align: center;
+            }
+
+            .featured .row .col-6 {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+                text-align: center;
+            }
+
+            .footer .row .col-4 {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+            }
+
+            .footer .social a img {
+                width: 15% !important;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .latest .row .col-4 {
+                width: 70% !important;
+            }
+
+            .number .number-middle .row .col-3 {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+            }
+
+            .seller .row .col-3 {
+                width: 50% !important;
+                float: none !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        /*# sourceMappingURL=style.css.map */
+    </style>
+
+    <title>Gaming || Mrh Rifat</title>
+</head>
+
+<body>
+
+    <!-- Container Section Start -->
+    <div class="container">
+
+        <!-- Header Section Start -->
+        <header class="header">
+            <div class="content">
+                <img src="https://i.ibb.co/F3bhpRg/logo.png" alt="logo">
+                <h1>LEVEL UP YOUR GAMING</h1>
+                <div class="cover">
+                    <button>
+                        <a href="#">
+                            UNLOCK  LEVEL PRO
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Header Lower -->
+        <div class="header-lower">
+            <img src="https://i.ibb.co/s5bDywK/lower2.png" alt="lower2">
+        </div>
+        <!-- Header Section End -->
+
+        <!-- Latest Section Start -->
+        <section class="latest">
+            <div class="col-12">
+                <h2>Latest Game</h2>
+                <table>
+                    <tr>
+                        <td class="first"></td>
+                    </tr>
+                    <tr>
+                        <td class="second"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="wrap">
+                            <img src="https://i.ibb.co/DL4whbd/games1.png" alt="games1">
+                        </div>
+                        <div class="card-header">
+                            <h4>Bowling Master 2 </h4>
+                        </div>
+                        <div class="card-body">
+                            <small>Rating</small>
+                            <img src="https://i.ibb.co/Lty14SN/rating.png" alt="rating">
+                            <p>
+                                Lorem Ipsum is simply dummy text of typesetting industry.
+                            </p>
+                            <span></span>
+                        </div>
+                        <div class="card-footer">
+                            <button>
+                                <a href="#">Download Now</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="wrap">
+                            <img src="https://i.ibb.co/Tm9jzNp/games2.png" alt="games2">
+                        </div>
+                        <div class="card-header">
+                            <h4>Bowling Master 2 </h4>
+                        </div>
+                        <div class="card-body">
+                            <small>Rating</small>
+                            <img src="https://i.ibb.co/Lty14SN/rating.png" alt="rating">
+                            <p>
+                                Lorem Ipsum is simply dummy text of typesetting industry.
+                            </p>
+                            <span></span>
+                        </div>
+                        <div class="card-footer">
+                            <button>
+                                <a href="#">Download Now</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="wrap">
+                            <img src="https://i.ibb.co/wp8RHmB/games3.png" alt="games3">
+                        </div>
+                        <div class="card-header">
+                            <h4>Bowling Master 2 </h4>
+                        </div>
+                        <div class="card-body">
+                            <small>Rating</small>
+                            <img src="https://i.ibb.co/Lty14SN/rating.png" alt="rating">
+                            <p>
+                                Lorem Ipsum is simply dummy text of typesetting industry.
+                            </p>
+                            <span></span>
+                        </div>
+                        <div class="card-footer">
+                            <button>
+                                <a href="#">Download Now</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest Section End -->
+
+        <!-- Number Section Start -->
+        <section class="number">
+            <div class="number-upper">
+                <img src="https://i.ibb.co/kS0rZYx/upper.png" alt="upper">
+            </div>
+            <div class="number-middle">
+
+                <!-- Heading -->
+                <div class="col-12">
+                    <h2>NUMBERS SPEAK</h2>
+                    <table>
+                        <tr>
+                            <td class="first"></td>
+                        </tr>
+                        <tr>
+                            <td class="second"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Number -->
+                <div class="row">
+                    <div class="col-3">
+                        <p>96</p>
+                        <p>Game Develop</p>
+                    </div>
+                    <div class="col-3">
+                        <p>06</p>
+                        <p>Year Top Seller</p>
+                    </div>
+                    <div class="col-3">
+                        <p>14</p>
+                        <p>Game Stores</p>
+                    </div>
+                    <div class="col-3">
+                        <p>4.8/5</p>
+                        <p>Rating</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="number-lower">
+                <img src="https://i.ibb.co/GWbzBH5/lower.png" alt="lower">
+            </div>
+        </section>
+        <!-- Number Section End -->
+
+        <!-- Seller Section Start -->
+        <section class="seller">
+
+            <!-- Heading -->
+            <div class="col-12">
+                <h2>TOP SELLER</h2>
+                <table>
+                    <tr>
+                        <td class="first"></td>
+                    </tr>
+                    <tr>
+                        <td class="second"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Games 1 -->
+            <div class="row">
+                <div class="col-3">
+                    <img src="https://i.ibb.co/XLTQ9bt/four-one.jpg" alt="four-one">
+                </div>
+                <div class="col-3">
+                    <img src="https://i.ibb.co/pJ6SyRM/four-two.jpg" alt="four-two">
+                </div>
+                <div class="col-3">
+                    <img src="https://i.ibb.co/r54hKC0/four-three.jpg" alt="four-three">
+                </div>
+                <div class="col-3">
+                    <img src="https://i.ibb.co/f4wBKRF/four-four.jpg" alt="four-four">
+                </div>
+            </div>
+
+            <!-- Games 3 -->
+            <div class="row2">
+                <div class="col-4">
+                    <img src="https://i.ibb.co/KFWS5mr/three-one.jpg" alt="three-one">
+                </div>
+                <div class="col-4">
+                    <img src="https://i.ibb.co/HC60Xwt/three-two.jpg" alt="three-two">
+                </div>
+                <div class="col-4">
+                    <img src="https://i.ibb.co/GT7TfC5/three-three.jpg" alt="three-three">
+                </div>
+            </div>
+
+        </section>
+        <!-- Seller Section End -->
+
+        <!-- Review Section Start -->
+        <section class="review">
+
+            <!-- Heading -->
+            <div class="head">
+                <h2>Player Review</h2>
+                <table>
+                    <tr>
+                        <td class="first"></td>
+                    </tr>
+                    <tr>
+                        <td class="second"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Review -->
+            <div class="row">
+                <div class="col">
+                    <img src="https://i.ibb.co/Jrny8Rj/review.jpg" alt="review">
+                </div>
+                <div class="col">
+                    <div class="content">
+                        <p>Lorem Ipsum is simply</p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                        <p>__Jack Noha</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Review Section End -->
+
+        <!-- Division Section Start -->
+        <section class="division">
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+        <!-- Division Section End -->
+
+        <!-- Featured Section Start -->
+        <section class="featured">
+            <!-- Heading -->
+            <div class="col-12">
+                <h2>FEATURED GAME</h2>
+                <table>
+                    <tr>
+                        <td class="first"></td>
+                    </tr>
+                    <tr>
+                        <td class="second"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Featured -->
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://i.ibb.co/ypBwnPV/featured.jpg" alt="featured">
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Last Mission 2</h4>
+                        </div>
+                        <div class="card-body">
+                            <small>Rating</small>
+                            <img src="https://i.ibb.co/Lty14SN/rating.png" alt="rating">
+                            <p>
+                                Lorem Ipsum is simply dummy text of typesetting industry.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <button>
+                                <a href="#">Download Now</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Devider -->
+            <div class="devider">
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+        <!-- Featured Section End -->
+
+        <!-- Footer Section Start -->
+        <footer class=" footer">
+
+            <!-- Footer Upper -->
+            <div class="footer-upper">
+                <img src="https://i.ibb.co/Zfpdsk0/footer-upper.png" alt="footer-upper">
+            </div>
+            <div class="devider"></div>
+
+            <!-- Content -->
+
+            <div class="row">
+                <div class="col-4">
+                    <p>Links</p>
+                    <table>
+                        <tr>
+                            <td><a href="#">Special Offers</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Most Wanted</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Help Center</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tour Guide</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">FAQ's</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-4">
+                    <p>Contact Info</p>
+                    <table>
+                        <tr>
+                            <td><a href="#">UK (+23) 456 7890</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">US (+22) 456 7891</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">careers@sales.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">support@domain.com</a> </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">sales@domain.com</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-4">
+                    <p>Company Name</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="social">
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <img src="https://i.ibb.co/vDFp90X/facebook.png" alt="facebook">
+                                            </a>
+                                            <a href="#">
+                                                <img src="https://i.ibb.co/WDx9kxr/twitter.png" alt="twitter">
+                                            </a>
+                                            <a href="#">
+                                                <img src="https://i.ibb.co/pPKCC8x/linkedin.png" alt="linkedin">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="devider2"></div>
+
+
+            <div class="copyright">
+                <p>Mrh Rifat © Gaming. All Rights Reserved</p>
+            </div>
+
+        </footer>
+        <!-- Footer Section End -->
+
+    </div>
+    <!-- Container Section End -->
+    <!--Img Section
+        <img src="https://i.ibb.co/GWbzBH5/lower.png" alt="lower">
+        <img src="https://i.ibb.co/HC60Xwt/three-two.jpg" alt="three-two">
+        <img src="https://i.ibb.co/GT7TfC5/three-three.jpg" alt="three-three">
+        <img src="https://i.ibb.co/KFWS5mr/three-one.jpg" alt="three-one">
+        <img src="https://i.ibb.co/pJ6SyRM/four-two.jpg" alt="four-two">
+        <img src="https://i.ibb.co/r54hKC0/four-three.jpg" alt="four-three">
+        <img src="https://i.ibb.co/XLTQ9bt/four-one.jpg" alt="four-one">
+        <img src="https://i.ibb.co/f4wBKRF/four-four.jpg" alt="four-four">
+        <img src="https://i.ibb.co/ypBwnPV/featured.jpg" alt="featured">
+        <img src="https://i.ibb.co/Jrny8Rj/review.jpg" alt="review">
+        <img src="https://i.ibb.co/kS0rZYx/upper.png" alt="upper">
+        <img src="https://i.ibb.co/wp8RHmB/games3.png" alt="games3">
+        <img src="https://i.ibb.co/Lty14SN/rating.png" alt="rating">
+        <img src="https://i.ibb.co/DL4whbd/games1.png" alt="games1">
+        <img src="https://i.ibb.co/Tm9jzNp/games2.png" alt="games2">
+        <img src="https://i.ibb.co/s5bDywK/lower2.png" alt="lower2">
+        <img src="https://i.ibb.co/F3bhpRg/logo.png" alt="logo">
+        <img src="https://i.ibb.co/yS1ts5v/banner.png" alt="banner">
+        <img src="https://i.ibb.co/WDx9kxr/twitter.png" alt="twitter">
+        <img src="https://i.ibb.co/pPKCC8x/linkedin.png" alt="linkedin">
+        <img src="https://i.ibb.co/88JsWTS/github.png" alt="github">
+        <img src="https://i.ibb.co/Zfpdsk0/footer-upper.png" alt="footer-upper">
+        <img src="https://i.ibb.co/vDFp90X/facebook.png" alt="facebook">
+        <img src="https://i.ibb.co/Y2mXm0r/favicon.png" alt="favicon">
+
+    -->
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+/*
+    Author: Rakibul Hassan Rifat
+    
+*/
+/*
+	==========Index=========
+	01) Import Section
+    02) Variable Section
+    03) Mixing & Inlcude Section
+	04) Inheritence Section
+    05) Global CSS Section
+	06) Container Section
+    07) Header Section
+	08) Latest Section
+	09) Number Section
+    10) Seller Section
+    11) Review Section
+    12) Division Query Section
+    13) Featured Section
+    14) Footer Section
+    15) Media Query Section
+	========================
+*/
+/*===== 01) Import Section =====*/
+/*===== Sizing =====*/
+html, body {
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+
+img {
+  border: 0;
+}
+
+table {
+  border-spacing: 0;
+}
+
+/*===== 02) Variable Section =====*/
+/*===== 03) Mixing & Inlcude Section =====*/
+/*===== 04) Inheritence Section =====*/
+.line, .col-12 table tr .first, .container .review .head table tr .first, .col-12 table tr .second, .container .review .head table tr .second {
+  border-bottom: 1px solid #C03D2A;
+  display: block;
+  margin: 0 auto;
+  padding: 7px;
+}
+
+/*===== 05) Global CSS Section =====*/
+.btn, .container .header .content .cover button, .container .latest .row .col-4 .card .card-footer button, .container .featured .row .col-6 .card .card-footer button {
+  border: none;
+  cursor: pointer;
+  background-color: #C03D2A;
+  padding: 15px 30px;
+  border-radius: 4px;
+  line-height: 120%;
+}
+
+.btn a, .container .header .content .cover button a, .container .latest .row .col-4 .card .card-footer button a, .container .featured .row .col-6 .card .card-footer button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.col-12, .container .review .head {
+  text-align: center;
+}
+
+.col-12 h2, .container .review .head h2 {
+  padding: 40px 10px 10px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 140%;
+  margin: 0;
+}
+
+.col-12 table, .container .review .head table {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.col-12 table tr .first, .container .review .head table tr .first {
+  width: 35%;
+}
+
+.col-12 table tr .second, .container .review .head table tr .second {
+  width: 20%;
+}
+
+.devider {
+  padding: 15px 30px;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.row {
+  width: 100%;
+}
+
+/*===== 06) Container Section =====*/
+.container {
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+  /*===== 07) Header Section =====*/
+  /*===== 08) Latest Section =====*/
+  /*===== 09) Number Section  =====*/
+  /*===== 10) Seller Section  =====*/
+  /*===== 11) Review Section =====*/
+  /*===== 12) Division Section =====*/
+  /*===== 13) Featured Section =====*/
+  /*===== 14) Footer Section =====*/
+  /*===== 06) End Container Section  =====*/
+}
+
+.container .header {
+  position: relative;
+  background: url("../img/header/banner.png") no-repeat center;
+  background-size: auto;
+  height: 550px;
+  width: 100%;
+  max-width: 650px;
+}
+
+.container .header .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 5%;
+  right: 0;
+  max-width: 320px;
+  margin: auto;
+  text-align: center;
+}
+
+.container .header .content h1 {
+  color: #fff;
+  padding: 20px 10px 10px;
+  line-height: 140%;
+  font-size: 40px;
+}
+
+.container .header .content .cover {
+  padding: 30px 10px 100px;
+}
+
+.container .latest .row .col-4 {
+  display: block;
+  width: 33%;
+  margin: 0 auto;
+  float: left;
+  padding: 5px;
+}
+
+.container .latest .row .col-4 .card {
+  text-align: center;
+}
+
+.container .latest .row .col-4 .card .wrap .card-img {
+  height: 100%;
+  width: 100%;
+}
+
+.container .latest .row .col-4 .card .card-header h4 {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  line-height: 140%;
+  color: #000;
+}
+
+.container .latest .row .col-4 .card .card-body small {
+  display: block;
+  font-size: 14px;
+  padding: 10px 10px 0;
+}
+
+.container .latest .row .col-4 .card .card-body img {
+  width: 45%;
+  padding: 5px 10px 10px;
+}
+
+.container .latest .row .col-4 .card .card-body p {
+  padding: 10px 5px;
+  font-size: 14px;
+  margin: 0;
+  color: #ADB5BE;
+}
+
+.container .latest .row .col-4 .card .card-body span {
+  border-top: 2px solid #ECF0F1;
+  padding: 10px 15px;
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.container .latest .row .col-4 .card .card-footer button {
+  padding: 12px 22px;
+}
+
+.container .number .number-upper {
+  margin-top: 30px;
+  background-color: #C7D5DE;
+}
+
+.container .number .number-middle {
+  background-color: #C7D5DE;
+  padding-bottom: 60px;
+}
+
+.container .number .number-middle .row .col-3 {
+  padding: 5px;
+  text-align: center;
+  display: block;
+  float: left;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.container .number .number-middle .row .col-3 p:first-child {
+  font-size: 34px;
+  color: #C03D2A;
+  line-height: 140%;
+  padding: 10px;
+  margin: 0;
+}
+
+.container .number .number-middle .row .col-3 p:last-child {
+  font-size: 14px;
+  color: #88898A;
+  padding: 0 10px 10px;
+  margin: 0;
+}
+
+.container .seller .row .col-3 {
+  padding: 5px;
+  text-align: center;
+  width: 25%;
+  float: left;
+  display: block;
+  margin: 0 auto;
+}
+
+.container .seller .row .col-3 img {
+  width: 100%;
+}
+
+.container .seller .row2 .col-4 {
+  padding: 5px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 33%;
+  float: left;
+}
+
+.container .seller .row2 .col-4 img {
+  width: 100%;
+}
+
+.container .review .head h2 {
+  text-align: left;
+  padding: 40px 10px 0;
+}
+
+.container .review .head table {
+  padding: 10px 10px 30px;
+}
+
+.container .review .head table tr .first {
+  margin: 0;
+  width: 25%;
+}
+
+.container .review .head table tr .second {
+  margin: 0;
+  width: 8%;
+}
+
+.container .review .row .col {
+  padding: 5px 0;
+  display: block;
+  float: left;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container .review .row .col img {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.container .review .row .col .content p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 160%;
+}
+
+.container .review .row .col .content p:first-child {
+  font-weight: bold;
+  padding: 10px 30px 10px 10px;
+}
+
+.container .review .row .col .content p:nth-child(2) {
+  color: #ADB5BE;
+  padding: 0 30px 10px 10px;
+}
+
+.container .review .row .col .content p:last-child {
+  font-style: italic;
+  color: #C03D2A;
+  padding: 0 30px 10px 10px;
+}
+
+.container .featured .row .col-6 {
+  padding: 5px 0;
+  float: left;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container .featured .row .col-6 img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+}
+
+.container .featured .row .col-6 .card .card-header h4 {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  line-height: 140%;
+  color: #000;
+}
+
+.container .featured .row .col-6 .card .card-body small {
+  display: block;
+  font-size: 14px;
+  padding: 10px 10px 0;
+}
+
+.container .featured .row .col-6 .card .card-body img {
+  width: 45%;
+  padding: 5px 10px 10px;
+}
+
+.container .featured .row .col-6 .card .card-body p {
+  padding: 5px 15px 5px 5px;
+  font-size: 14px;
+  margin: 0;
+  color: #ADB5BE;
+}
+
+.container .featured .row .col-6 .card .card-footer button {
+  padding: 12px 22px;
+}
+
+.container .footer {
+  background-color: #000;
+}
+
+.container .footer .footer-upper {
+  background-color: #000;
+}
+
+.container .footer .devider {
+  background-color: #000;
+}
+
+.container .footer .row .col-4 {
+  background-color: #000;
+  padding: 5px 0;
+  text-align: center;
+  float: left;
+  width: 33%;
+  margin: 0 auto;
+}
+
+.container .footer .row .col-4 p {
+  color: #fff;
+}
+
+.container .footer .row .col-4 table {
+  width: 100%;
+  text-align: center;
+  color: #2E4153;
+}
+
+.container .footer .row .col-4 table td a {
+  font-size: 14px;
+  line-height: 160%;
+  color: #2E4153;
+  text-decoration: none;
+}
+
+.container .footer .row .col-4 table td a:hover {
+  text-decoration: underline;
+}
+
+.container .footer .row .col-4 table td .social a {
+  text-decoration: none;
+}
+
+.container .footer .row .col-4 table td .social a img {
+  padding: 5px;
+  width: 15%;
+}
+
+.container .footer .row .col-4:last-child table p {
+  font-size: 14px;
+  padding: 10px;
+  margin: 0;
+}
+
+.container .footer .devider2 {
+  border-bottom: 1px solid #2E4153;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: block;
+}
+
+.container .footer .copyright {
+  padding: 5px 0;
+}
+
+.container .footer .copyright p {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*===== 15) Media Query Section =====*/
+@media (max-width: 500px) {
+  .latest .row .col-4 {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+  .number .number-middle .row .col-3 {
+    width: 50% !important;
+    float: left !important;
+    margin: 0 auto !important;
+  }
+  .seller .row .col-3 {
+    width: 50% !important;
+    float: left !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .seller .row2 .col-4 {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+  .review .row .col {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  .featured .row .col-6 {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  .footer .row .col-4 {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+  .footer .social a img {
+    width: 15% !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .latest .row .col-4 {
+    width: 70% !important;
+  }
+  .number .number-middle .row .col-3 {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+  .seller .row .col-3 {
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,582 @@
+/*
+    Author: Rakibul Hassan Rifat
+    
+*/
+
+/*
+	==========Index=========
+	01) Import Section
+    02) Variable Section
+    03) Mixing & Inlcude Section
+	04) Inheritence Section
+    05) Global CSS Section
+	06) Container Section
+    07) Header Section
+	08) Latest Section
+	09) Number Section
+    10) Seller Section
+    11) Review Section
+    12) Division Query Section
+    13) Featured Section
+    14) Footer Section
+    15) Media Query Section
+	========================
+*/
+/*===== 01) Import Section =====*/
+@import "sizing";
+
+/*===== 02) Variable Section =====*/
+$white: #fff;
+$btn-bg:#C03D2A;
+$black:#000;
+$light-gray:#ECF0F1;
+$card-p:#ADB5BE;
+$number-bg:#C7D5DE;
+$number-p:#88898A;
+$div-line:#CED4D9;
+$footer-text:#2E4153;
+
+/*===== 03) Mixing & Inlcude Section =====*/
+@mixin custom-card{
+    .card{
+        text-align: center;
+        .wrap{
+            .card-img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .card-header{
+            h4{
+                font-size: 16px;
+                margin: 0;
+                padding:10px;
+                line-height: 140%;
+                color:$black;
+            }
+        }
+        .card-body{
+            small{
+                display: block;
+                font-size: 14px;
+                padding: 10px 10px 0;
+            }
+            img{
+                width: 45%;
+                padding: 5px 10px 10px;
+            }
+            p{
+                padding: 10px 5px;
+                font-size: 14px;
+                margin: 0;
+                color:$card-p;
+            }
+            span{
+                border-top: 2px solid $light-gray;
+                padding: 10px 15px;
+                display: block;
+                width: 20%;
+                margin: 0 auto;
+            }
+        }
+        .card-footer{
+            button{
+                @extend .btn;
+                padding: 12px 22px;
+            }
+        }
+    }
+}
+@mixin res-50{
+    width: 50% !important;
+    float: none !important;
+    margin: 0 auto !important;
+}
+@mixin res-502{
+    width: 50% !important;
+    float: left !important;
+    margin: 0 auto !important;
+}
+
+
+/*===== 04) Inheritence Section =====*/
+.line{
+    border-bottom: 1px solid $btn-bg;
+    display: block;
+    margin: 0 auto;
+    padding: 7px;
+}
+
+/*===== 05) Global CSS Section =====*/
+.btn{
+    border:none;
+    cursor: pointer;
+    background-color:$btn-bg;
+    padding:15px 30px;
+    border-radius: 4px;
+    line-height: 120%;
+    a{
+        text-decoration:none;
+        color:$white;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+    }
+}
+.col-12{
+    text-align: center;
+    h2{
+        padding: 40px 10px 10px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 140%;
+        margin:0;
+    }
+    table{
+        width:100%;
+        padding-bottom: 20px; 
+        tr{
+            .first{
+                @extend .line;
+                width: 35%;
+            }
+            .second{
+                @extend .line;
+                width: 20%;
+            }
+        }
+    }
+}
+.devider{
+    padding: 15px 30px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+div{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.row{
+    width:100%;
+}
+/*===== 06) Container Section =====*/
+.container{
+    max-width:650px;
+    width:100%;
+    margin:0 auto;
+
+    /*===== 07) Header Section =====*/
+    .header{
+        position: relative;
+        background: url('../img/header/banner.png')no-repeat center;
+        background-size: auto;
+        height: 550px;
+        width:100%;
+        max-width: 650px;
+
+        .content{
+            position:absolute;
+            bottom:0;
+            left:0;
+            top:5%;
+            right:0;
+            max-width:320px;
+            margin:auto;
+            text-align: center;
+
+            h1{
+                color:$white;
+                padding: 20px 10px 10px;
+                line-height: 140%;
+                font-size:40px;
+            }
+            .cover{
+                padding:30px 10px 100px;
+                button{
+                    @extend .btn;
+                }
+            }
+        }
+    }
+
+    /*===== 08) Latest Section =====*/
+    .latest{
+        
+        .row{
+            .col-4{
+                display: block;
+                width: 33%;
+                margin: 0 auto;
+                float:left;
+                padding:5px;
+                @include custom-card;
+            }
+        }
+    }
+
+    /*===== 09) Number Section  =====*/
+    .number{
+        
+        .number-upper{  
+            margin-top: 30px;
+            background-color: $number-bg;
+        }
+        
+        .number-middle{
+            background-color:$number-bg ;
+            padding-bottom: 60px;
+
+            .row{
+        
+                .col-3{
+                    padding: 5px;
+                    text-align: center;
+                    display: block;
+                    float: left;
+                    width: 25%;
+                    margin:0 auto;
+
+                    p:first-child{
+                        font-size: 34px;
+                        color:$btn-bg;
+                        line-height: 140%;
+                        padding:10px;
+                        margin:0;
+                    }
+                    p:last-child{
+                        font-size: 14px;
+                        color:$number-p;
+                        padding:0 10px 10px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /*===== 10) Seller Section  =====*/
+
+    .seller{
+        .row{
+           
+            .col-3{
+                padding: 5px;
+                text-align: center;
+                width: 25%;
+                float: left;
+                display: block;
+                margin: 0 auto;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .row2{
+            
+            .col-4{
+                padding: 5px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                width: 33%;
+                float: left;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /*===== 11) Review Section =====*/
+    .review{
+        .head{
+            @extend .col-12;
+            h2{
+                text-align: left;
+                padding: 40px 10px 0;
+            }
+            table{
+                padding:10px 10px 30px;
+                tr{
+                    .first{
+                        margin:0;
+                        width: 25%;
+                    }
+                    .second{
+                        margin:0;
+                        width: 8%;
+                    }
+                }
+            }
+        }
+
+        .row{
+            
+            .col{
+                padding:5px 0;
+                display: block;
+                float: left;
+                width: 50%;
+                margin: 0 auto;
+
+                img{
+                    padding: 10px;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .content{
+                    p{
+                        font-size: 14px;
+                        margin:0;
+                        line-height: 160%;
+                    }
+                    p:first-child{
+                        font-weight: bold;
+                        padding:10px 30px 10px 10px;
+                    }
+                    p:nth-child(2){
+                        color:$card-p;
+                        padding:0 30px 10px 10px;
+                    }
+                    p:last-child{
+                        font-style: italic;
+                        color:$btn-bg;
+                        padding:0 30px 10px 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /*===== 12) Division Section =====*/
+    
+
+    /*===== 13) Featured Section =====*/
+    .featured{
+        .row{
+            
+            .col-6{
+                padding:5px 0;
+                float: left;
+                width: 50%;
+                margin: 0 auto;
+
+                img{
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding:10px;
+                }
+                .card{
+                    .card-header{
+                        h4{
+                            font-size: 16px;
+                            margin: 0;
+                            padding:10px;
+                            line-height: 140%;
+                            color:$black;
+                        }
+                    }
+                    .card-body{
+                        small{
+                            display: block;
+                            font-size: 14px;
+                            padding: 10px 10px 0;
+                        }
+                        img{
+                            width: 45%;
+                            padding: 5px 10px 10px;
+                        }
+                        p{
+                            padding: 5px 15px 5px 5px;
+                            font-size: 14px;
+                            margin: 0;
+                            color:$card-p;
+                        }
+                    }
+                    .card-footer{
+                        button{
+                            @extend .btn;
+                            padding: 12px 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*===== 14) Footer Section =====*/ 
+    .footer{
+        background-color: $black;
+        .footer-upper{
+            background-color: $black;
+        }
+        .devider{
+            background-color: $black;
+        }
+        .row{
+
+            .col-4{
+               background-color: $black;
+                padding: 5px 0;
+                text-align: center;
+                float: left;
+                width:33%;
+                margin: 0 auto;
+                
+                p{
+                    color:$white
+                }
+                table{
+                    width: 100%;
+                    text-align: center;
+                    color: $footer-text;
+                    td{
+                        a{
+                            font-size: 14px;
+                            line-height: 160%;
+                            color: $footer-text;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                        }
+                        .social{
+                            a{
+                                text-decoration: none;
+
+                                img{
+                                    padding: 5px;
+                                    width:15%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-4:last-child table p{
+                font-size: 14px;
+                padding: 10px;
+                margin:0;
+            }
+        }
+
+        .devider2{   
+            border-bottom: 1px solid #2E4153;
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 10px 0;
+            display: block;
+        }
+
+        .copyright{
+            padding: 5px 0;
+            p{
+                color:$white;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+
+    /*===== 06) End Container Section  =====*/
+}
+
+/*===== 15) Media Query Section =====*/
+
+@media(max-width:500px){
+    .latest{
+        .row{
+            .col-4{
+                @include res-50;
+            }
+        }
+    }
+    .number{
+        .number-middle{
+            .row{
+                .col-3{
+                    @include res-502;
+                }
+            }
+        }
+    }
+    .seller{
+        .row{
+            .col-3{
+                @include res-502;
+            }
+        }
+    }
+}
+@media (max-width:400px){
+    .seller{
+        .row2{
+            .col-4{
+                @include res-50;
+            }
+        }
+    }
+    .review{
+        .row{
+            .col{
+                @include res-50;
+                text-align: center;
+            }
+        }
+    }
+    .featured{
+        .row{
+            .col-6{
+                @include res-50;
+                text-align: center;
+            }
+        }
+    }
+    .footer{
+        .row{
+            .col-4{
+                @include res-50;
+            }
+        }
+        .social{
+            a{
+                img{
+                    width: 15% !important;
+                }
+            }
+        }
+    }
+}
+@media (max-width:350px){
+    .latest{
+        .row{
+            .col-4{
+                width: 70% !important;
+            }
+        }
+    }
+    .number{
+        .number-middle{
+            .row{
+                .col-3{
+                    @include res-50;
+                }
+            }
+        }
+    }
+    .seller{
+            .row{
+                .col-3{
+                    @include res-50;
+                }
+            }
+    }
+}
